@@ -34,16 +34,7 @@ export default class App extends Component<IAppProps, IAppState> {
   }
 
   connect() {
-    return createConnection({
-      database: "test",
-      entities: [
-          Author,
-          Category,
-          Post
-      ],
-      synchronize: true,
-      type: "expo",
-    });
+    return createConnection("test");
   }
 
   async runDemo() {
